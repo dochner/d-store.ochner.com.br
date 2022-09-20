@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .content {
+    @apply text-gray-900;
+  }
+
+  .content > h1:not([class]),
+  .content > :not(.embed) h1:not([class]) {
+    @apply font-extrabold mb-10 text-3xl lg:text-4xl mt-4;
+  }
+
+  .content > h2:not([class]),
+  .content > :not(.embed) h2:not([class]) {
+    @apply font-extrabold mb-6 text-xl lg:text-3xl mt-4;
+  }
+
+  .content > h3:not([class]),
+  .content > :not(.embed) h3:not([class]) {
+    @apply font-semibold mb-6 text-2xl mt-6;
+  }
+
+  .content > h4:not([class]),
+  .content > :not(.embed) h4:not([class]) {
+    @apply text-xl my-6;
+  }
+
+  .content > h5:not([class]),
+  .content > :not(.embed) h5:not([class]) {
+    @apply text-lg my-6;
+  }
+
+  .content > h6:not([class]),
+  .content > :not(.embed) h6:not([class]) {
+    @apply text-lg my-6;
+  }
+
+  .content > p:not([class]),
+  .content > :not(.embed) p:not([class]) {
+    @apply text-lg pb-2;
+  }
+
+  .content h1:last-child:not([class]),
+  .content h2:last-child:not([class]),
+  .content h3:last-child:not([class]),
+  .content h4:last-child:not([class]),
+  .content h5:last-child:not([class]),
+  .content h6:last-child:not([class]),
+  .content p:last-child:not([class]) {
+    @apply mb-0;
+  }
+
+  .content > a:not([class]),
+  .content > a:not([class]) > u,
+  .content > :not(.embed) a:not([class]),
+  .content > :not(.embed) a:not([class]) > u {
+    @apply no-underline font-medium text-primary-500 hover:text-primary-600 hover:underline
+    focus:text-primary-700 focus:underline;
+  }
+
+  .content hr:not([class]) {
+    @apply bg-secondary-700 h-0.5;
+  }
+
+  .content ul:not([class]),
+  .content ol:not([class]) {
+    @apply pl-10;
+  }
+
+  .content ul:not([class]) {
+    @apply list-disc mb-4;
+  }
+
+  .content ol:not([class]) {
+    @apply list-decimal;
+  }
+
+  .content li:not([class]) {
+    @apply text-base leading-6 font-normal lg:text-lg lg:leading-7;
+  }
+
+  .content ul li::marker:not([class]) {
+    @apply text-primary-500;
+  }
+
+  .content ol li::marker:not([class]) {
+    @apply text-gray-500 font-medium;
+  }
+
+  .content iframe:not([class]),
+  .content figure:not([class]),
+  .content img:not([class]) {
+    @apply w-full;
+  }
+
+  .content iframe:not([class]),
+  .content figure:not([class]) {
+    @apply mb-6;
+  }
+
+  .content figcaption:not([class]) {
+    @apply mt-4 text-gray-500;
+  }
+
+  .content strong:not([class]),
+  .content b:not([class]) {
+    @apply font-semibold;
+  }
+
+  .content blockquote:not([class]) {
+    @apply relative italic px-2 font-medium before:absolute before:-top-10 mt-16 mb-2 before:content-[''] before:left-1
+    before:w-10 before:h-8 before:bg-no-repeat lg:pl-14 lg:before:-top-4;
+  }
+
+  .content blockquote > p:not([class]) {
+    @apply text-sm px-2 font-medium text-left pb-0;
+  }
+
+  .content blockquote > p > p:not([class]),
+  .content blockquote > p > em:not([class]) {
+    @apply text-sm px-2 text-gray-500 text-right pb-10;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .line-clamp-4 {
+    @apply line-clamp-3;
+    -webkit-line-clamp: 4;
+  }
+
+  .line-clamp-5 {
+    @apply line-clamp-3;
+    -webkit-line-clamp: 5;
+  }
+}
